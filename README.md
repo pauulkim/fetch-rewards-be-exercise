@@ -5,3 +5,4 @@
   - uses nodemon which allows you to listen to changes
   - allows you to access `http://localhost:5000/`
 - `npm run start` to run the actual server
+- `curl http://localhost:5000/transactions/` to get list of all transactions
