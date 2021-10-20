@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pauulkim/fetch-rewards-be-exercise/issues"
   },
-  "homepage": "https://github.com/pauulkim/fetch-rewards-be-exercise#readme"
+  "homepage": "https://github.com/pauulkim/fetch-rewards-be-exercise#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
