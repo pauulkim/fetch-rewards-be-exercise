@@ -14,6 +14,8 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   transactions.push(req.body)
   res.send(req.body);
-})
+});
+
+
 
 export default router;
