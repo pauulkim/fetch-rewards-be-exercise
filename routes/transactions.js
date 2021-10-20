@@ -10,10 +10,10 @@ router.get("/", (req, res) => {
   res.send(transactions)
 });
 
+// add a transaction
 router.post("/", (req, res) => {
+  transactions.push(req.body)
   res.send(req.body);
 })
 
 export default router;
-
-// curl -X POST -H "Content-Type: application/json" -d '{"userId": 5, "title": "Post Title", "body": "Post content."}' http://localhost:5000/transactions/
