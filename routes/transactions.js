@@ -7,13 +7,13 @@ const transactions = [];
 
 // get all the transactions
 router.get("/", (req, res) => {
-  res.send(transactions)
+  res.json(transactions)
 });
 
 // add a transaction
 router.post("/", (req, res) => {
   transactions.push(req.body)
-  res.send(req.body);
+  res.json(req.body);
 });
 
 
