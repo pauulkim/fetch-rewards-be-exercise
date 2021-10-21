@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
 
 // spending points
 router.post("/spend", (req, res) => {
-  transactions.sort( (a, b) => b.timestamp - a.timestamp )
+  transactions.sort( (a, b) =>  new Date(a.timestamp) - new Date(b.timestamp) )
 
   res.json(transactions);
 });
