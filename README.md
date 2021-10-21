@@ -44,6 +44,22 @@ curl -X POST -H "Content-Type: application/json" -d '{ "payer": "DANNON", "point
 }
 ```
 
+### Spending points
+#### Request
+`POST /transactions/spend`
+```
+curl -X POST -H "Content-Type: application/json" -d '{ "points": 5000 }' http://localhost:5000/transactions/spend ; echo
+```
+
+#### Response
+```
+[
+  { "payer": "DANNON", "points": -100 },
+  { "payer": "UNILEVER", "points": -200 },
+  { "payer": "MILLER COORS", "points": -4,700 }
+]
+```
+
 ### Getting balances for each payer
 #### Request
 `GET /transactions/`
@@ -59,20 +75,4 @@ curl http://localhost:5000/transactions/ ; echo
   "MILLER COORS": 5300
 }
 
-```
-
-### Spending points
-#### Request
-`POST /transactions/spend`
-```
-curl -X POST -H "Content-Type: application/json" -d '{ "points": 5000 }' http://localhost:5000/transactions/spend ; echo
-```
-
-#### Response
-```
-[
-  { "payer": "DANNON", "points": -100 },
-  { "payer": "UNILEVER", "points": -200 },
-  { "payer": "MILLER COORS", "points": -4,700 }
-]
 ```
