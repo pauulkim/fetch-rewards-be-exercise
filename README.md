@@ -10,9 +10,7 @@
 - `curl -X POST -H "Content-Type: application/json" -d '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' http://localhost:5000/transactions/ ; echo`
   - to add a transaction to the transactions table
 - `curl http://localhost:5000/transactions/ ; echo` to get balances
-
-
-
+- `curl -X POST -H "Content-Type: application/json" -d '{ "points": 5000 }' http://localhost:5000/transactions/spend ; echo`
 
 
 
