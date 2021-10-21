@@ -38,13 +38,13 @@ router.post("/spend", (req, res) => {
       if (spend[t.payer]) spend[t.payer].points -= t.points
       else spend[t.payer] = { "payer": t.payer, "points": - t.points };
       points -= t.points;
-
+      
       t.points = 0;
     } else {
       spend[t.payer] = { "payer": t.payer, "points": - points };
-      points = 0;
-
       t.points -= points;
+
+      points = 0;
       break;
     }
   }
