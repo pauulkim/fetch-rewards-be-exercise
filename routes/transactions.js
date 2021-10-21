@@ -49,7 +49,7 @@ router.post("/spend", (req, res) => {
     }
   }
 
-  res.json(spend);
+  res.json(Object.values(spend));
 });
 
 export default router;
